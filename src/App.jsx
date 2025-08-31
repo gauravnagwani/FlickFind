@@ -52,7 +52,7 @@ const App = () => {
         await loadTrendingMovies(); // ✅ refresh trending section immediately
       }
     } catch (error) {
-      console.error(`Error fetching data: ${error}`);
+      console.error(`Error fetching movies: ${error}`);
       setErrorMessage("Failed to fetch movies. Please try again later.");
     }
     finally {
