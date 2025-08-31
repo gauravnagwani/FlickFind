@@ -57,6 +57,7 @@
     @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
   }
 
+  /* ✅ Fixed trending responsiveness */
   .trending {
     @apply mt-10 sm:mt-20;
 
@@ -76,14 +77,6 @@
       @apply w-[90px] h-[120px] sm:w-[127px] sm:h-[163px] rounded-lg object-cover;
     }
   }
-
-  @utility fancy-text {
-    -webkit-text-stroke: 3px rgba(206, 206, 251, 0.5);
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 60px;
-    /* default for mobile */
-  }
-
 
   .search {
     @apply w-full bg-light-100/5 px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
@@ -154,10 +147,11 @@
   @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
 }
 
+/* ✅ Adjusted fancy-text for mobile */
 @utility fancy-text {
-  -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
-  font-size: 190px;
+  -webkit-text-stroke: 3px rgba(206, 206, 251, 0.5);
   font-family: "Bebas Neue", sans-serif;
+  font-size: 60px; /* mobile default */
 }
 
 @utility hide-scrollbar {
