@@ -57,24 +57,23 @@
     @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
   }
 
-  /* ✅ Fixed trending responsiveness */
   .trending {
-    @apply mt-10 sm:mt-20;
+    @apply mt-20;
 
     & ul {
-      @apply flex flex-row overflow-x-auto gap-4 w-full hide-scrollbar;
+      @apply flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
     }
 
     & ul li {
-      @apply min-w-[140px] sm:min-w-[200px] flex flex-col items-center;
+      @apply min-w-[230px] flex flex-row items-center;
     }
 
     & ul li p {
-      @apply fancy-text text-[60px] sm:text-[120px] md:text-[190px] mt-2 text-nowrap;
+      @apply fancy-text mt-[22px] text-nowrap;
     }
 
     & ul li img {
-      @apply w-[90px] h-[120px] sm:w-[127px] sm:h-[163px] rounded-lg object-cover;
+      @apply w-[127px] h-[163px] rounded-lg object-cover -ml-3.5;
     }
   }
 
@@ -147,11 +146,10 @@
   @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
 }
 
-/* ✅ Adjusted fancy-text for mobile */
 @utility fancy-text {
-  -webkit-text-stroke: 3px rgba(206, 206, 251, 0.5);
+  -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
+  font-size: 190px;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 60px; /* mobile default */
 }
 
 @utility hide-scrollbar {
