@@ -58,24 +58,32 @@
   }
 
   .trending {
-    @apply mt-20;
+    @apply mt-10 sm:mt-20;
 
     & ul {
-      @apply flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
+      @apply flex flex-row overflow-x-auto gap-4 w-full hide-scrollbar;
     }
 
     & ul li {
-      @apply min-w-[230px] flex flex-row items-center;
+      @apply min-w-[140px] sm:min-w-[200px] flex flex-col items-center;
     }
 
     & ul li p {
-      @apply fancy-text mt-[22px] text-nowrap;
+      @apply fancy-text text-[60px] sm:text-[120px] md:text-[190px] mt-2 text-nowrap;
     }
 
     & ul li img {
-      @apply w-[127px] h-[163px] rounded-lg object-cover -ml-3.5;
+      @apply w-[90px] h-[120px] sm:w-[127px] sm:h-[163px] rounded-lg object-cover;
     }
   }
+
+  @utility fancy-text {
+    -webkit-text-stroke: 3px rgba(206, 206, 251, 0.5);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    /* default for mobile */
+  }
+
 
   .search {
     @apply w-full bg-light-100/5 px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
